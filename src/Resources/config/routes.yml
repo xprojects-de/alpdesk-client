@@ -1,0 +1,7 @@
+alpdesk_client:
+    path: /client
+    defaults:
+        _controller: Alpdesk\AlpdeskClient\Controller\Client\AlpdeskClientController:client
+        _scope: frontend
+        _token_check: false
+    methods: [GET]

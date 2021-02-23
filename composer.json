@@ -1,0 +1,42 @@
+{
+  "name": "alpdesk/alpdesk-client",
+  "description": "Alpdesk-Client for Contao ALpdesk-Core",
+  "keywords": ["contao", "alpdesk"],
+  "type": "contao-bundle",
+  "homepage": "https://github.com/xprojects-de/alpdesk-client",
+  "license": "MIT",
+  "version": "0.0.1",
+  "require": {
+    "php": ">=7.4",
+    "alpdesk/alpdesk-core": "^1.2.0"
+  },
+  "conflict": {
+    "contao/manager-plugin": "<2.0 || >=3.0"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.0"
+  },
+  "authors": [
+    {
+      "name": "XProjects",
+      "homepage": "https://x-projects.de",
+      "email": "infos@x-projects.de",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/xprojects-de/alpdesk-client/issues"
+  },
+  "autoload": {
+    "psr-4": {
+      "Alpdesk\\AlpdeskClient\\": "src/"
+    }
+  },
+  "extra": {
+    "contao-manager-plugin": "Alpdesk\\AlpdeskClient\\ContaoManager\\Plugin",
+    "contao-component-dir": "public"
+  },
+  "config": {
+    "contao-component-dir": "public"
+  }
+}

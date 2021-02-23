@@ -1,0 +1,12 @@
+services:
+
+  _defaults:
+    autoconfigure: true
+    autowire: true
+
+  Alpdesk\AlpdeskClient\Controller\Client\AlpdeskClientController:
+    arguments:
+      - '@contao.framework'
+      - '%kernel.project_dir%'
+    tags:
+      - controller.service_arguments

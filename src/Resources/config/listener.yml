@@ -1,0 +1,6 @@
+services:
+
+  alpdeskclient.listener.contao_generatesymlinks:
+    class: Alpdesk\AlpdeskClient\Events\Listener\AlpdeskClientEventContaoGenerateSymlinkListener
+    tags:
+      - { name: kernel.event_listener, event: contao.generate_symlinks}  
