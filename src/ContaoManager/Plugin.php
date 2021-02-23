@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Alpdesk\AlpdeskClient\ContaoManager;
 
+use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
@@ -17,7 +18,7 @@ use Alpdesk\AlpdeskClient\AlpdeskClientBundle;
 class Plugin implements BundlePluginInterface, RoutingPluginInterface, ExtensionPluginInterface {
 
   public function getBundles(ParserInterface $parser) {
-    return [BundleConfig::create(AlpdeskClientBundle::class)->setLoadAfter([AlpdeskCoreBundle::class])];
+    return [BundleConfig::create(AlpdeskClientBundle::class)->setLoadAfter([ContaoCoreBundle::class, AlpdeskCoreBundle::class])];
   }
 
   public function getRouteCollection(LoaderResolverInterface $resolver, KernelInterface $kernel) {
