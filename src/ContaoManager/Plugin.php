@@ -11,11 +11,10 @@ use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Routing\RoutingPluginInterface;
 use Symfony\Component\Config\Loader\LoaderResolverInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
-use Contao\ManagerPlugin\Config\ExtensionPluginInterface;
 use Alpdesk\AlpdeskCore\AlpdeskCoreBundle;
 use Alpdesk\AlpdeskClient\AlpdeskClientBundle;
 
-class Plugin implements BundlePluginInterface, RoutingPluginInterface, ExtensionPluginInterface {
+class Plugin implements BundlePluginInterface, RoutingPluginInterface {
 
   public function getBundles(ParserInterface $parser) {
     return [BundleConfig::create(AlpdeskClientBundle::class)->setLoadAfter([ContaoCoreBundle::class, AlpdeskCoreBundle::class])];
