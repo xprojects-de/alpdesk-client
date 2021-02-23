@@ -1,6 +1,6 @@
 {
   "name": "alpdesk/alpdesk-client",
-  "description": "Alpdesk-Client for Contao ALpdesk-Core",
+  "description": "Alpdesk-Client for Contao Alpdesk-Core",
   "keywords": ["contao", "alpdesk"],
   "type": "contao-bundle",
   "homepage": "https://github.com/xprojects-de/alpdesk-client",
@@ -9,12 +9,6 @@
   "require": {
     "php": ">=7.4",
     "alpdesk/alpdesk-core": "^1.1.0"
-  },
-  "conflict": {
-    "contao/manager-plugin": "<2.0 || >=3.0"
-  },
-  "require-dev": {
-    "contao/manager-plugin": "^2.0"
   },
   "authors": [
     {
